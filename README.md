@@ -1,2 +1,5 @@
-# homebrew-proggy
-Proggy CLI Tool homebrew tap
+# Proggy CLI Tool via Homebrew
+
+Official distribution via Homebrew for the Proggy CLI Tool.
+
+Install with `brew install proggy/proggy/proggy`
