@@ -9,17 +9,9 @@ cask 'proggy' do
     raise "Unsupported architecture: #{Hardware::CPU.type}"
   end
 
-  if OS.mac?
-    platform = 'darwin'
-    extension = 'zip'
-    fallback_path = '~/Library/Application Support/proggy/config.yml'
-  elsif OS.linux?
-    platform = 'linux'
-    extension = 'tgz'
-    fallback_path = '~/.config/proggy/config.yml'
-  else
-    raise "Unsupported platform: #{OS.type}"
-  end
+  platform = 'darwin'
+  extension = 'zip'
+  fallback_path = '~/Library/Application Support/proggy/config.yml'
 
   url "https://github.com/proggy-io/cli/releases/download/v#{version}/proggy-#{platform}-#{arch}.#{extension}"
   sha256 'your-sha256-checksum-here' # Replace with the actual SHA256 checksum of your binary
@@ -35,7 +27,6 @@ cask 'proggy' do
   end
 
   zap trash: [
-    "#{ENV['XDG_CONFIG_HOME']}/proggy/config.yml",
     fallback_path
   ]
 end
