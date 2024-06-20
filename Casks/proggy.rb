@@ -1,12 +1,12 @@
 cask 'proggy' do
-  version 1
+  version 1.3.8
 
   if Hardware::CPU.intel?
     arch = 'amd64'
-    sha256 0e830eb2735d24ab7e2509b31cb001e0a5a89f011e09a0c3bc964bc29d13820d
+    sha256 b4094e0ff9a1b9d2fb1a166c5b217180c222e00a742bb34d2ca8183e9669da66
   elsif Hardware::CPU.arm?
     arch = 'arm64'
-    sha256 
+    sha256 aeb0a444cd7c744617ea4ee212b12bd53689afac15bdaddcd54c858dc14d11f7
   else
     raise "Unsupported architecture: #{Hardware::CPU.type}"
   end
