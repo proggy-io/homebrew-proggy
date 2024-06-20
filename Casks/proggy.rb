@@ -1,5 +1,5 @@
 cask 'proggy' do
-  version 1.3.8
+  version '1.3.8'
 
   if Hardware::CPU.intel?
     arch = 'amd64'
