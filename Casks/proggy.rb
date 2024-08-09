@@ -1,13 +1,13 @@
 cask "proggy" do
-  version "1.8.1"
+  version "1.9.0"
 
   if Hardware::CPU.intel?
     arch = "amd64"
-    sha256 "59a07e8062f273621baeab07bc57565d0d683d2535df495d8764d5de9827f5c1"
+    sha256 "05510720ff725efbc984053219145a632a59cac7072bc962fa25268bf051e7d9"
     url "https://github.com/proggy-io/cli/releases/download/v#{version}/proggy-cli_Darwin_x86_64.zip"
   elsif Hardware::CPU.arm?
     arch = "arm64"
-    sha256 "e8c934bba36d70acf052abdc82f7ba29d12cd38b1c0127c4d8c598e6278f3d3a"
+    sha256 "b4683ab62587585755bac23880b23fd5c50aee446125895b6e06cfcd803616a6"
     url "https://github.com/proggy-io/cli/releases/download/v#{version}/proggy-cli_Darwin_arm64.zip"
   else
     raise "Unsupported architecture: #{Hardware::CPU.type}"
